@@ -1,0 +1,9 @@
+{
+	"name": "advworksazuredatafactoryy",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "deb14ab5-e3f8-4b8a-af9c-59a2e1cdec11",
+		"tenantId": "a3d3d0f0-6b19-40dc-a740-67ee247d38f0"
+	}
+}
