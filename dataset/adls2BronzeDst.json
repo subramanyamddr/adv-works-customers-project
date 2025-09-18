@@ -5,13 +5,27 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"sinkFolder": {
+				"type": "string"
+			},
+			"sinkFile": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "products.csv",
-				"folderPath": "products",
+				"fileName": {
+					"value": "@dataset().sinkFile",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().sinkFolder",
+					"type": "Expression"
+				},
 				"fileSystem": "bronze"
 			},
 			"columnDelimiter": ",",
