@@ -47,7 +47,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Lookup1').output",
+						"value": "@activity('Lookup1').output.value",
 						"type": "Expression"
 					},
 					"isSequential": true,
@@ -102,7 +102,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"relativeURL": {
-											"value": "@item().value.p_rel_url",
+											"value": "@item().p_rel_url",
 											"type": "Expression"
 										}
 									}
@@ -114,11 +114,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"sinkFolder": {
-											"value": "@item().value.p_sink_folder",
+											"value": "@item().p_sink_folder",
 											"type": "Expression"
 										},
 										"sinkFile": {
-											"value": "@item().value.p_sink_file",
+											"value": "@item().p_sink_file",
 											"type": "Expression"
 										}
 									}
